@@ -41,3 +41,7 @@ You will see that Dee, Randy has been moved to the Department Production from th
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/8d51518a-a1c2-4b7e-927f-2ed2bc08bc01)
 
+There is no longer a DeptID or Department mistake.
+
+![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/a3883d4e-f0e9-4791-baa9-e83c3f3fa8b1)
+
