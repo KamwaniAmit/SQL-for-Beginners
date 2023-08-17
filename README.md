@@ -52,4 +52,8 @@ SELECT DISTINCT EmpStatusID, EmploymentStatus FROM HRDataset;
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/44dfade0-c439-460c-9823-451227bcd21f)
 
 Once again we found that there is duplicate EmploymentStatus records.
-a
+
+Let's work on fixing EmpStatusID so that it is distinct for EmploymentStatus 'Active'. 207 records found EmploymentStatus as 'Active'.
+
+SELECT Id, Employee_Name, EmpStatusID, EmploymentStatus FROM HRDataset WHERE EmploymentStatus = 'Active';
+
