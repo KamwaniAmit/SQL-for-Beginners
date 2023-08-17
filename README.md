@@ -59,6 +59,15 @@ SELECT Id, Employee_Name, EmpStatusID, EmploymentStatus FROM HRDataset WHERE Emp
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/cec04fe7-8eb5-4203-8065-7d578cab3b75)
 
+UPDATE HRDataset SET EmpStatusID = 
+CASE ID
+WHEN 96 THEN 4
+WHEN 133 THEN 4
+ELSE NULL
+END
+WHERE ID IN (96, 133);
+
+![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/b53da1d7-2a1f-4127-9f6a-96ce9a3add49)
 
 Let's work on fixing EmpStatusID so that it is distinct for EmploymentStatus 'Active'. 207 records found EmploymentStatus as 'Active'.
 
