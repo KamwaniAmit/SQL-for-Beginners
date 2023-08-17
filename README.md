@@ -17,7 +17,7 @@ SELECT Id, Employee_Name, DeptID, Department FROM HRDataset WHERE DeptID = 1 ORD
 
 We found that Quinn, Sean belongs to the Software Engineering Department, although the DeptID must be 4 rather than 1. To correct the records below is syntax:
 
-UPDATE HRDataset SET DeptID WHERE Id = 228;
+UPDATE HRDataset SET DeptID = 4 WHERE Id = 228;
 
 You will see that Quinn, Sean has been moved to the Department Software Engineering from the Department Admin Offices.
 
@@ -25,3 +25,8 @@ You will see that Quinn, Sean has been moved to the Department Software Engineer
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/227c6fcd-932d-4bca-867b-966e7c39397d)
 
+Let's checkout the Sales Department. Syntax as below:
+
+SELECT Id, Employee_Name, DeptID, Department FROM HRDataset WHERE DeptID = 6 ORDER BY Department ASC;
+
+![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/8f28a49b-0935-4fa6-bd80-f06cc1227953)
