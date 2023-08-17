@@ -5,7 +5,7 @@ Find Unique Value for DeptID and Department. Syntax as below:
 
 SELECT DISTINCT DeptID, Department FROM HRDataset;
 
-![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/ecce9254-8a55-4562-9676-d138a656d24b)
+![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/e0299d09-6152-4358-ba2a-0bfb2764755b)
 
 You will find that DeptID duplicates. We must correct the records before proceeding further.
 
