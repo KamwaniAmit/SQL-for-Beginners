@@ -57,3 +57,4 @@ Let's work on fixing EmpStatusID so that it is distinct for EmploymentStatus 'Ac
 
 SELECT Id, Employee_Name, EmpStatusID, EmploymentStatus FROM HRDataset WHERE EmploymentStatus = 'Active';
 
+![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/83074ca6-2646-4e6f-819d-bc1501ec376c)
