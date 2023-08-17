@@ -5,5 +5,6 @@ Find Unique Value for DeptID and Department.
 
 SELECT DISTINCT DeptID, Department FROM HRDataset;
 
-![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/a96f87cc-de52-4f6d-bbdc-4813f0bfcb5a)
+![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/ecce9254-8a55-4562-9676-d138a656d24b)
+
 
