@@ -69,7 +69,7 @@ WHERE ID IN (96, 133);
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/b53da1d7-2a1f-4127-9f6a-96ce9a3add49)
 
-Let's work on fixing EmpStatusID so that it is distinct for EmploymentStatus 'Active'. 207 records found EmploymentStatus as 'Active'.
+Now will work on fixing EmpStatusID so that it is distinct for EmploymentStatus 'Active'. 207 records found EmploymentStatus as 'Active'.
 
 SELECT Id, Employee_Name, EmpStatusID, EmploymentStatus FROM HRDataset WHERE EmploymentStatus = 'Active';
 
