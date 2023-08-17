@@ -1,7 +1,7 @@
 # SQL-for-Beginners
 Learning Microsoft Transact SQL
 
-Find Unique Value for DeptID and Department.
+Find Unique Value for DeptID and Department. Syntax as below:
 
 SELECT DISTINCT DeptID, Department FROM HRDataset;
 
@@ -9,7 +9,7 @@ SELECT DISTINCT DeptID, Department FROM HRDataset;
 
 You will find that DeptID duplicates. We must correct the records before proceeding further.
 
-Let's first see Admin Offices.
+Let's first see Admin Offices. Syntax as below:
 
 SELECT Id, Employee_Name, DeptID, Department FROM HRDataset WHERE DeptID = 1 ORDER BY Department ASC;
 
