@@ -45,4 +45,10 @@ There is no longer a DeptID or Department mistake.
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/a3883d4e-f0e9-4791-baa9-e83c3f3fa8b1)
 
-a
+Find Unique Value for EmpStatusID and EmploymentStatus. Syntax as below:
+
+SELECT DISTINCT EmpStatusID, EmploymentStatus FROM HRDataset;
+
+![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/44dfade0-c439-460c-9823-451227bcd21f)
+
+Once again we found that there is duplicate EmploymentStatus records.
