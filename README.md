@@ -45,3 +45,4 @@ There is no longer a DeptID or Department mistake.
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/a3883d4e-f0e9-4791-baa9-e83c3f3fa8b1)
 
+a
