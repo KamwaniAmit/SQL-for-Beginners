@@ -53,6 +53,13 @@ SELECT DISTINCT EmpStatusID, EmploymentStatus FROM HRDataset;
 
 Once again we found that there is duplicate EmploymentStatus records.
 
+Let's work on fixing EmpStatusID so that it is distinct for EmploymentStatus 'Terminated for Cause'. 16 records found EmploymentStatus as 'Terminated for Cause'.
+
+SELECT Id, Employee_Name, EmpStatusID, EmploymentStatus FROM HRDataset WHERE EmploymentStatus = 'Terminated for Cause';
+
+![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/cec04fe7-8eb5-4203-8065-7d578cab3b75)
+
+
 Let's work on fixing EmpStatusID so that it is distinct for EmploymentStatus 'Active'. 207 records found EmploymentStatus as 'Active'.
 
 SELECT Id, Employee_Name, EmpStatusID, EmploymentStatus FROM HRDataset WHERE EmploymentStatus = 'Active';
