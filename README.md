@@ -74,3 +74,11 @@ Now will work on fixing EmpStatusID so that it is distinct for EmploymentStatus 
 SELECT Id, Employee_Name, EmpStatusID, EmploymentStatus FROM HRDataset WHERE EmploymentStatus = 'Active';
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/83074ca6-2646-4e6f-819d-bc1501ec376c)
+
+UPDATE HRDataset SET EmpStatusID = 1 WHERE ID IN (40, 17, 52, 59, 135, 136, 178, 185, 247, 263, 295, 9, 20, 32, 62, 115, 117, 118, 145, 157, 170, 174, 193, 201, 252);
+
+![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/2e6d84f1-4a2c-4e59-bb3d-fdbb616bc61c)
+
+![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/344d08e4-a9d9-4dc6-ba21-d374191b5e23)
+
+There is no longer a EmpStatusID or EmploymentStatus mistake.
