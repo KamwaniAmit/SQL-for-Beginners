@@ -30,3 +30,14 @@ Let's checkout the Sales Department. Syntax as below:
 SELECT Id, Employee_Name, DeptID, Department FROM HRDataset WHERE DeptID = 6 ORDER BY Department ASC;
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/8f28a49b-0935-4fa6-bd80-f06cc1227953)
+
+Let's correct the error by amending DeptID for Dee, Randy and syntax is as followed:
+
+UPDATE HRDataset SET DeptID = 5 WHERE Id = 65;
+
+You will see that Dee, Randy has been moved to the Department Production from the Department Sales.
+
+![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/1f7c10af-270c-43a7-b29a-7e3d6071eef8)
+
+![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/8d51518a-a1c2-4b7e-927f-2ed2bc08bc01)
+
