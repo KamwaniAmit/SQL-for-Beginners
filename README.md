@@ -82,3 +82,9 @@ UPDATE HRDataset SET EmpStatusID = 1 WHERE ID IN (40, 17, 52, 59, 135, 136, 178,
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/344d08e4-a9d9-4dc6-ba21-d374191b5e23)
 
 There is no longer a EmpStatusID or EmploymentStatus mistake.
+
+To ensure the accuracy of the data, we need to verify that each employee's department name matches their corresponding department ID.
+
+SELECT e.Employee_Name, e.Department AS EmployeeDeptName, e.DeptID AS EmployeeDeptID, d.Department AS CorrectDeptName, d.DeptID AS CorrectDeptID FROM HRDataSet e
+JOIN HRDataSet d ON e.Employee_Name = d.Employee_Name WHERE e.Department != d.Department OR e.DeptID != d.DeptID;
+
