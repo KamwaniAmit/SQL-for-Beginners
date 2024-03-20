@@ -87,23 +87,30 @@ To ensure the accuracy of the data, we must verify the following:
 
 1. Check for duplicate EmployeeID entries.
 2. Confirm if Employee Name, GenderID, and Gender match.
-3. Validate whether Employee Name, MarriedID, MarritalStatusID, and MarritalDescription match.
+3. Validate whether Employee Name, MarritalStatusID, and MarritalDescription match.
 4. Verify that each employee's department name corresponds to their Department ID.
 
 To Check for duplicate EmployeeID entries.
+
 SELECT EmpID FROM HRDataset GROUP BY EmpID HAVING COUNT(*) > 1;
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/489d49d5-410a-41a3-b3c8-355462bab448)
 
 Confirm if Employee Name, GenderID, and Gender match.
+
 SELECT Employee_Name, GenderID, Sex FROM HRDataSet WHERE (Sex = 'Male' AND GenderID != 1) OR (Sex = 'Female' AND GenderID != 0);
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/7d2d9ae0-f736-4b5a-83e1-237f90106eda)
 
+Validate whether Employee Name, MarritalStatusID, and MarritalDescription match.
 
+SELECT Employee_Name, MaritalStatusID, MaritalDesc FROM HRDataSet WHERE (MaritalStatusID = 1 AND MaritalDesc != 'Married') OR (MaritalStatusID = 0 AND MaritalDesc != 'Single') OR (MaritalStatusID = 2 AND MaritalDesc != 'Divorced') OR (MaritalStatusID = 3 AND MaritalDesc != 'Separated') OR (MaritalStatusID = 4 AND MaritalDesc != 'Widowed');
+
+![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/ff161b4e-1567-4b48-a1d5-ac2f3c4b4177)
+
+Verify that each employee's department name corresponds to their Department ID.
 
 SELECT e.Employee_Name, e.Department AS EmployeeDeptName, e.DeptID AS EmployeeDeptID, d.Department AS CorrectDeptName, d.DeptID AS CorrectDeptID FROM HRDataSet e
 JOIN HRDataSet d ON e.Employee_Name = d.Employee_Name WHERE e.Department != d.Department OR e.DeptID != d.DeptID;
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/f99885ff-ca70-47cd-b756-c89149cdf46d)
-
