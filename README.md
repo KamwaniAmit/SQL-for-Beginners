@@ -1,4 +1,3 @@
-Below is README.md in my GitHub Account. Could you redraft? 
 # SQL-for-Beginners
 Learning Microsoft Transact SQL
 
