@@ -54,7 +54,7 @@ Employee Dee, Randy belonged to Production, not Sales.
 
 UPDATE HRDataset SET DeptID = 5 WHERE Id = 65;
 
-You will see that Dee, Randy has been moved to the Department Production from the Department Sales.
+📌 Result: Department mapping corrected.
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/1f7c10af-270c-43a7-b29a-7e3d6071eef8)
 
