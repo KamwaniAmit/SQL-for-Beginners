@@ -16,7 +16,6 @@ The dataset contains employee-level HR information such as department, employmen
 
 We begin by checking whether each `DeptID` correctly maps to a single `Department`.
 
-```sql
 SELECT DISTINCT DeptID, Department FROM HRDataset;
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/e0299d09-6152-4358-ba2a-0bfb2764755b)
