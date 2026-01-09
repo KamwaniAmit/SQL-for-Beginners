@@ -53,6 +53,7 @@ SELECT Id, Employee_Name, DeptID, Department FROM HRDataset WHERE DeptID = 6 ORD
 Employee Dee, Randy belonged to Production, not Sales.
 
 ✅ Correction Applied
+
 UPDATE HRDataset SET DeptID = 5 WHERE Id = 65;
 
 📌 Result: Department mapping corrected.
