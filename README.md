@@ -37,19 +37,20 @@ Employee Quinn, Sean was incorrectly assigned to Admin Offices instead of Softwa
 
 UPDATE HRDataset SET DeptID = 4 WHERE Id = 228;
 
-You will see that Quinn, Sean has been moved to the Department Software Engineering from the Department Admin Offices.
+📌 Result: Quinn, Sean is now correctly mapped.
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/b4b82a0d-c33a-479f-b74a-a0d1c40acc3d)
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/227c6fcd-932d-4bca-867b-966e7c39397d)
 
-Let's checkout the Sales Department. Syntax as below:
+Issue Found in Sales Department
 
 SELECT Id, Employee_Name, DeptID, Department FROM HRDataset WHERE DeptID = 6 ORDER BY Department ASC;
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/8f28a49b-0935-4fa6-bd80-f06cc1227953)
 
-Let's correct the error by amending DeptID for Dee, Randy and syntax is as followed:
+🔎 Finding:
+Employee Dee, Randy belonged to Production, not Sales.
 
 UPDATE HRDataset SET DeptID = 5 WHERE Id = 65;
 
