@@ -1,9 +1,24 @@
-# SQL-for-Beginners
-Learning Microsoft Transact SQL
+# SQL for Beginners  
+**Learning Microsoft Transact-SQL through Real-World Data Cleaning**
 
-Find Unique Value for DeptID and Department. Syntax as below:
+This repository demonstrates how to use Microsoft SQL Server (T-SQL) to **identify, analyze, and correct data quality issues** in an HR dataset.  
+The project is designed for beginners who want hands-on experience with **SELECT, DISTINCT, UPDATE, validation queries, and data consistency checks**.
 
-SELECT DISTINCT DeptID, Department FROM HRDataset;
+---
+
+## 📘 Dataset Used
+**Table Name:** `HRDataset`  
+The dataset contains employee-level HR information such as department, employment status, gender, and marital status.
+
+---
+
+## 🔍 Step 1: Identify Duplicate Department Mappings
+
+We begin by checking whether each `DeptID` correctly maps to a single `Department`.
+
+```sql
+SELECT DISTINCT DeptID, Department
+FROM HRDataset;
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/e0299d09-6152-4358-ba2a-0bfb2764755b)
 
