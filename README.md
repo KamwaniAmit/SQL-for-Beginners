@@ -18,6 +18,9 @@ We begin by checking whether each `DeptID` correctly maps to a single `Departmen
 
 SELECT DISTINCT DeptID, Department FROM HRDataset;
 
+📌 Observation:
+Some DeptID values are associated with multiple department names, indicating incorrect mappings.
+
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/e0299d09-6152-4358-ba2a-0bfb2764755b)
 
 You will find that DeptID duplicates. We must correct the records before proceeding further.
