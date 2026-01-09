@@ -52,6 +52,7 @@ SELECT Id, Employee_Name, DeptID, Department FROM HRDataset WHERE DeptID = 6 ORD
 🔎 Finding:
 Employee Dee, Randy belonged to Production, not Sales.
 
+✅ Correction Applied
 UPDATE HRDataset SET DeptID = 5 WHERE Id = 65;
 
 📌 Result: Department mapping corrected.
@@ -64,9 +65,11 @@ There is no longer a DeptID or Department mistake.
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/a3883d4e-f0e9-4791-baa9-e83c3f3fa8b1)
 
-Find Unique Value for EmpStatusID and EmploymentStatus. Syntax as below:
+✅ Final Verification
 
 SELECT DISTINCT EmpStatusID, EmploymentStatus FROM HRDataset;
+
+✔️ No remaining Department or DeptID inconsistencies.
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/143d7dfc-d646-4306-ba81-a293daf3bdbb)
 
