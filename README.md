@@ -24,7 +24,7 @@ Some DeptID values are associated with multiple department names, indicating inc
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/e0299d09-6152-4358-ba2a-0bfb2764755b)
 
 🛠 Step 2: Correct Department Mapping Errors
-Issue Found in Admin Offices
+**Issue Found in Admin Offices**
 
 SELECT Id, Employee_Name, DeptID, Department FROM HRDataset WHERE DeptID = 1 ORDER BY Department ASC;
 
@@ -43,7 +43,7 @@ UPDATE HRDataset SET DeptID = 4 WHERE Id = 228;
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/227c6fcd-932d-4bca-867b-966e7c39397d)
 
-Issue Found in Sales Department
+**Issue Found in Sales Department**
 
 SELECT Id, Employee_Name, DeptID, Department FROM HRDataset WHERE DeptID = 6 ORDER BY Department ASC;
 
@@ -62,21 +62,23 @@ UPDATE HRDataset SET DeptID = 5 WHERE Id = 65;
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/8d51518a-a1c2-4b7e-927f-2ed2bc08bc01)
 
-There is no longer a DeptID or Department mistake.
-
-![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/a3883d4e-f0e9-4791-baa9-e83c3f3fa8b1)
-
 ✅ Final Verification
 
 SELECT DISTINCT EmpStatusID, EmploymentStatus FROM HRDataset;
 
 ✔️ No remaining Department or DeptID inconsistencies.
 
+![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/a3883d4e-f0e9-4791-baa9-e83c3f3fa8b1)
+
+🔍 Step 3: Validate Employment Status Consistency
+
+**Identify Duplicate Employment Status IDs**
+
+SELECT DISTINCT EmpStatusID, EmploymentStatus FROM HRDataset;
+
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/143d7dfc-d646-4306-ba81-a293daf3bdbb)
 
-Once again we found that there is duplicate EmploymentStatus records.
-
-Let's work on fixing EmpStatusID so that it is distinct for EmploymentStatus 'Terminated for Cause'. 16 records found EmploymentStatus as 'Terminated for Cause'.
+**Fix: Terminated for Cause**
 
 SELECT Id, Employee_Name, EmpStatusID, EmploymentStatus FROM HRDataset WHERE EmploymentStatus = 'Terminated for Cause';
 
@@ -92,7 +94,7 @@ WHERE ID IN (96, 133);
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/b53da1d7-2a1f-4127-9f6a-96ce9a3add49)
 
-Now will work on fixing EmpStatusID so that it is distinct for EmploymentStatus 'Active'. 207 records found EmploymentStatus as 'Active'.
+**Fix: Active Employees**
 
 SELECT Id, Employee_Name, EmpStatusID, EmploymentStatus FROM HRDataset WHERE EmploymentStatus = 'Active';
 
@@ -104,34 +106,29 @@ UPDATE HRDataset SET EmpStatusID = 1 WHERE ID IN (40, 17, 52, 59, 135, 136, 178,
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/344d08e4-a9d9-4dc6-ba21-d374191b5e23)
 
-There is no longer a EmpStatusID or EmploymentStatus mistake.
+✔️ Employment Status values are now consistent.
 
-To ensure the accuracy of the data, we must verify the following:
+✅ Step 4: Data Validation Checks
 
-1. Check for duplicate EmployeeID entries.
-2. Confirm if Employee Name, GenderID, and Gender match.
-3. Validate whether Employee Name, MarritalStatusID, and MarritalDescription match.
-4. Verify that each employee's department name corresponds to their Department ID.
-
-To Check for duplicate EmployeeID entries.
+1️⃣ Duplicate Employee IDs
 
 SELECT EmpID FROM HRDataset GROUP BY EmpID HAVING COUNT(*) > 1;
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/489d49d5-410a-41a3-b3c8-355462bab448)
 
-Confirm if Employee Name, GenderID, and Gender match.
+2️⃣ Gender Consistency Check
 
 SELECT Employee_Name, GenderID, Sex FROM HRDataSet WHERE (Sex = 'Male' AND GenderID != 1) OR (Sex = 'Female' AND GenderID != 0);
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/7d2d9ae0-f736-4b5a-83e1-237f90106eda)
 
-Validate whether Employee Name, MarritalStatusID, and MarritalDescription match.
+3️⃣ Marital Status Validation
 
 SELECT Employee_Name, MaritalStatusID, MaritalDesc FROM HRDataSet WHERE (MaritalStatusID = 1 AND MaritalDesc != 'Married') OR (MaritalStatusID = 0 AND MaritalDesc != 'Single') OR (MaritalStatusID = 2 AND MaritalDesc != 'Divorced') OR (MaritalStatusID = 3 AND MaritalDesc != 'Separated') OR (MaritalStatusID = 4 AND MaritalDesc != 'Widowed');
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/ff161b4e-1567-4b48-a1d5-ac2f3c4b4177)
 
-Verify that each employee's department name corresponds to their Department ID.
+4️⃣ Final Department Consistency Check
 
 SELECT e.Employee_Name, e.Department AS EmployeeDeptName, e.DeptID AS EmployeeDeptID, d.Department AS CorrectDeptName, d.DeptID AS CorrectDeptID FROM HRDataSet e
 JOIN HRDataSet d ON e.Employee_Name = d.Employee_Name WHERE e.Department != d.Department OR e.DeptID != d.DeptID;
