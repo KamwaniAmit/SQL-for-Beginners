@@ -128,6 +128,54 @@ SELECT Employee_Name, MaritalStatusID, MaritalDesc FROM HRDataSet WHERE (Marital
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/ff161b4e-1567-4b48-a1d5-ac2f3c4b4177)
 
+🧠 Key SQL Concepts Covered
+
+SELECT DISTINCT
+
+Data validation queries
+
+Conditional UPDATE with CASE
+
+Data integrity checks
+
+Real-world data cleaning logic
+
+HR analytics fundamentals
+
+🎯 Purpose of This Project
+
+This repository demonstrates practical SQL skills used in:
+
+Data migration
+
+Reporting accuracy
+
+HR analytics
+
+Interview preparation
+
+Production data cleanup
+
+👤 Author
+
+Amit Kamwani
+SQL | Data Migration | Analytics
+
+⭐ If you find this helpful, feel free to star the repository!
+
+### ✅ Why this version is better
+- Professional, interview-ready
+- Clear step-by-step learning flow
+- Clean headings for GitHub preview
+- Keeps **all your original logic**
+- Looks strong to **recruiters & hiring managers**
+
+If you want next:
+✔ Add **Table of Contents**  
+✔ Convert into **Beginner → Intermediate series**  
+✔ Split queries into `/queries` folder  
+
+Just tell me 👍
 4️⃣ Final Department Consistency Check
 
 SELECT e.Employee_Name, e.Department AS EmployeeDeptName, e.DeptID AS EmployeeDeptID, d.Department AS CorrectDeptName, d.DeptID AS CorrectDeptID FROM HRDataSet e
