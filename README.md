@@ -128,6 +128,13 @@ SELECT Employee_Name, MaritalStatusID, MaritalDesc FROM HRDataSet WHERE (Marital
 
 ![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/ff161b4e-1567-4b48-a1d5-ac2f3c4b4177)
 
+4️⃣ Final Department Consistency Check
+
+SELECT e.Employee_Name, e.Department AS EmployeeDeptName, e.DeptID AS EmployeeDeptID, d.Department AS CorrectDeptName, d.DeptID AS CorrectDeptID FROM HRDataSet e
+JOIN HRDataSet d ON e.Employee_Name = d.Employee_Name WHERE e.Department != d.Department OR e.DeptID != d.DeptID;
+
+![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/f99885ff-ca70-47cd-b756-c89149cdf46d)
+
 🧠 Key SQL Concepts Covered
 
 SELECT DISTINCT
@@ -141,6 +148,7 @@ Data integrity checks
 Real-world data cleaning logic
 
 HR analytics fundamentals
+
 
 🎯 Purpose of This Project
 
@@ -160,7 +168,6 @@ Production data cleanup
 
 Amit Kamwani
 SQL | Data Migration | Analytics
-
 ⭐ If you find this helpful, feel free to star the repository!
 
 ### ✅ Why this version is better
@@ -176,9 +183,3 @@ If you want next:
 ✔ Split queries into `/queries` folder  
 
 Just tell me 👍
-4️⃣ Final Department Consistency Check
-
-SELECT e.Employee_Name, e.Department AS EmployeeDeptName, e.DeptID AS EmployeeDeptID, d.Department AS CorrectDeptName, d.DeptID AS CorrectDeptID FROM HRDataSet e
-JOIN HRDataSet d ON e.Employee_Name = d.Employee_Name WHERE e.Department != d.Department OR e.DeptID != d.DeptID;
-
-![image](https://github.com/KamwaniAmit/SQL-for-Beginners/assets/142380910/f99885ff-ca70-47cd-b756-c89149cdf46d)
