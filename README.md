@@ -169,17 +169,3 @@ Production data cleanup
 Amit Kamwani
 SQL | Data Migration | Analytics
 ⭐ If you find this helpful, feel free to star the repository!
-
-### ✅ Why this version is better
-- Professional, interview-ready
-- Clear step-by-step learning flow
-- Clean headings for GitHub preview
-- Keeps **all your original logic**
-- Looks strong to **recruiters & hiring managers**
-
-If you want next:
-✔ Add **Table of Contents**  
-✔ Convert into **Beginner → Intermediate series**  
-✔ Split queries into `/queries` folder  
-
-Just tell me 👍
